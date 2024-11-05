@@ -25,7 +25,7 @@ public class Engine {
 
     /* refuels the train so that the fuel is at max level */
 
-    public void refuel(){
+    public void recharge(){
         this.currentFuel = this.maxFuel;
     }
 
@@ -34,11 +34,11 @@ public class Engine {
     public boolean go(){
         if (currentFuel > 0){
             this.currentFuel = this.currentFuel - 5;
-            System.out.println("The train has " + this.currentFuel + "gallons of fuel remaining");
+            System.out.println("The train has " + this.currentFuel + "hours of charge remaining");
             return true;
         }
         else{
-            System.out.println("The train is out of fuel, time to refuel");
+            System.out.println("The train is out of charge, time to recharge");
             return false;
         }
     }

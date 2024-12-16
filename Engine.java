@@ -50,5 +50,4 @@ public static void main(String[] args) {
     while (myEngine.go()) {
         System.out.println("Choo choo!");
     }
-    System.out.println("Out of fuel.");
-}
+    System.out.println("Out of fuel.");}

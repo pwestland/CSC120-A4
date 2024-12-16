@@ -8,6 +8,8 @@ public class Train {
     private int maxPassengers;
     private ArrayList<Passenger> manifestPassengers;
 
+    /* makes a train */
+
     public Train(Fueltype fuelType, double maxFuel, int ncars, int maxPassengers){
         this.engine = new Engine(fuelType, maxFuel);
         this.cars = new ArrayList<>(nCars);
@@ -16,7 +18,7 @@ public class Train {
         }
     }
 
-    /* retrieves an engine */
+    /* retrieves the engine */
 
     public Engine getEngine(){
         return this.engine;
@@ -34,6 +36,8 @@ public class Train {
         return this.maxPassengers * nCars;
     }
 
+    /* returns how many seats are left */
+
     public int seatsLeft(){
         int space = 0;
         for (Car car: cars){
@@ -41,6 +45,8 @@ public class Train {
         }
         return space;
     }
+
+    /* prints the manifest with all passengers */
 
     public void getManifest(){
         if (manifestPassengers.isEmpty()){
